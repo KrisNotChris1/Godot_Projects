@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cge2fuclikg8j"
+path="res://.godot/imported/coinGold.obj-bb12f05df9ff4cc79e404c281ee2ce3b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coinGold.obj-bb12f05df9ff4cc79e404c281ee2ce3b.mesh"]
+
+source_file="res://Godot-3D-Platformer-Assets/Godot 3D Platformer - Assets/Models/coinGold.obj"
+dest_files=["res://.godot/imported/coinGold.obj-bb12f05df9ff4cc79e404c281ee2ce3b.mesh", "res://.godot/imported/coinGold.obj-bb12f05df9ff4cc79e404c281ee2ce3b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

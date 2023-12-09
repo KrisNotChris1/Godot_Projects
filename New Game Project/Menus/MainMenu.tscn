@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd3a167lw8v71"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_85y05"]
+[ext_resource type="AudioStream" uid="uid://bbd4xh3ngvbim" path="res://Music/chill-abstract-intention-12099.mp3" id="2_tjk8e"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 451.0
+offset_top = 146.0
+offset_right = 451.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.56894, 3.04189)
+script = ExtResource("1_85y05")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_tjk8e")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

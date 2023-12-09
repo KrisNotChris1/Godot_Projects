@@ -1,0 +1,110 @@
+[gd_scene load_steps=11 format=3 uid="uid://rb7kx30x3x20"]
+
+[ext_resource type="PackedScene" uid="uid://dp7eaeq041dtm" path="res://Platforms/PlatformLarge.tscn" id="1_5wiut"]
+[ext_resource type="Script" path="res://Levels/Level1.gd" id="1_opl4x"]
+[ext_resource type="PackedScene" uid="uid://bkgi3qc6qhfrf" path="res://Prefabs/Player.tscn" id="2_jmaq7"]
+[ext_resource type="PackedScene" uid="uid://d0xj7071v8mw2" path="res://Prefabs/Spikes.tscn" id="3_oq4wr"]
+[ext_resource type="PackedScene" uid="uid://cjxo0hlsi2jtr" path="res://Prefabs/Coin.tscn" id="4_oyou2"]
+[ext_resource type="PackedScene" uid="uid://clxsigii75gh0" path="res://Prefabs/EndFlag.tscn" id="5_1n8hc"]
+[ext_resource type="PackedScene" uid="uid://bgp0kesqqvet4" path="res://Prefabs/Enemy.tscn" id="6_1e0pw"]
+[ext_resource type="AudioStream" uid="uid://cifys58ilfrmx" path="res://Music/forest-lullaby-110624.mp3" id="7_vwrby"]
+[ext_resource type="PackedScene" uid="uid://b7qw8emd6x1aa" path="res://Menus/PauseMenu.tscn" id="8_6jxbk"]
+
+[sub_resource type="Environment" id="Environment_60twl"]
+background_mode = 1
+background_color = Color(0.337255, 0.356863, 0.0235294, 0.352941)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_opl4x")
+
+[node name="PlatformLarge" parent="." instance=ExtResource("1_5wiut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 2)
+
+[node name="PlatformLarge2" parent="." instance=ExtResource("1_5wiut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.751215, -1)
+
+[node name="PlatformLarge3" parent="." instance=ExtResource("1_5wiut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
+
+[node name="PlatformLarge4" parent="." instance=ExtResource("1_5wiut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.14398, -7)
+
+[node name="PlatformLarge5" parent="." instance=ExtResource("1_5wiut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99872, 2.3188, -10.6267)
+
+[node name="PlatformLarge6" parent="." instance=ExtResource("1_5wiut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64582, 3.43762, -12.785)
+
+[node name="PlatformLarge7" parent="." instance=ExtResource("1_5wiut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11956, 4.23323, -15.2604)
+
+[node name="Player" parent="." instance=ExtResource("2_jmaq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00941, 0.0380439, 2.21482)
+
+[node name="Spikes" parent="." instance=ExtResource("3_oq4wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45393, 0.760463, -0.431585)
+
+[node name="Spikes2" parent="." instance=ExtResource("3_oq4wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45393, 0.760463, -1.57828)
+
+[node name="Spikes3" parent="." instance=ExtResource("3_oq4wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.54788, 0.00815767, -3.43433)
+
+[node name="Spikes4" parent="." instance=ExtResource("3_oq4wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.54788, 0.00815767, -4.59549)
+
+[node name="Spikes5" parent="." instance=ExtResource("3_oq4wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40752, 1.14658, -7.58594)
+
+[node name="Coin" parent="." instance=ExtResource("4_oyou2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67871, 0.88056, -1.14152)
+
+[node name="Coin2" parent="." instance=ExtResource("4_oyou2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51531, -0.00453806, -3.95956)
+
+[node name="Coin3" parent="." instance=ExtResource("4_oyou2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16439, 1.15759, -6.72169)
+
+[node name="Coin4" parent="." instance=ExtResource("4_oyou2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06143, 2.46905, -10.6757)
+
+[node name="Coin5" parent="." instance=ExtResource("4_oyou2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72665, 3.45786, -12.9145)
+
+[node name="EndFlag" parent="." instance=ExtResource("5_1n8hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12272, 4.23545, -15.3303)
+next_scene = "res://Menus/WinScreen.tscn"
+
+[node name="Enemy" parent="." instance=ExtResource("6_1e0pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.91751, 2.24216, -13.0408)
+
+[node name="Enemy5" parent="." instance=ExtResource("6_1e0pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60431, 1.3994, -9.98543)
+
+[node name="Enemy2" parent="." instance=ExtResource("6_1e0pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.32433, 0.0693219, -7.3961)
+
+[node name="Enemy3" parent="." instance=ExtResource("6_1e0pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66381, -0.200549, -4.22786)
+
+[node name="Enemy4" parent="." instance=ExtResource("6_1e0pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.49844, -0.200549, -0.90695)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999844, 0.0113357, -0.0135607, 4.56953e-05, 0.765584, 0.643336, 0.0176745, -0.643236, 0.765464, -1.66381, 3.79597, -4.22786)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_60twl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_vwrby")
+autoplay = true
+bus = &"Music"
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_6jxbk")]
+visible = false
+offset_left = 500.0
+offset_top = 217.0
+offset_right = 500.0
+offset_bottom = 217.0

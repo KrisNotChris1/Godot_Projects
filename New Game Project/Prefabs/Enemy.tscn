@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgp0kesqqvet4"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_6xdx7"]
+[ext_resource type="ArrayMesh" uid="uid://mvd3ie23bw83" path="res://Godot-3D-Platformer-Assets/Godot 3D Platformer - Assets/Models/spikeBlock.obj" id="2_o5q3w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xaow5"]
+metallic = 0.7
+metallic_specular = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gnego"]
+albedo_color = Color(0.65098, 0, 0, 1)
+metallic = 0.18
+metallic_specular = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpdqo"]
+size = Vector3(0.892807, 0.886597, 0.875549)
+
+[node name="Enemy" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.30134, -0.929592, -1.94119)
+script = ExtResource("1_6xdx7")
+move_dir = Vector3(0, 5, 0)
+
+[node name="Model" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_o5q3w")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_xaow5")
+surface_material_override/1 = SubResource("StandardMaterial3D_gnego")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00193024, 0.502923, 0.00827026)
+shape = SubResource("BoxShape3D_xpdqo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

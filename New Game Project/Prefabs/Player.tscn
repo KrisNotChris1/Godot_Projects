@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkgi3qc6qhfrf"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_p2685"]
+[ext_resource type="ArrayMesh" uid="uid://gjuyfsvj5gs0" path="res://Godot-3D-Platformer-Assets/Godot 3D Platformer - Assets/Models/characterVampire.obj" id="2_dmd8c"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3nmlp"]
+radius = 0.3
+height = 1.2
+
+[sub_resource type="LabelSettings" id="LabelSettings_edleq"]
+font_size = 57
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_p2685")
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = ExtResource("2_dmd8c")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.597541, 0)
+shape = SubResource("CapsuleShape3D_3nmlp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999506, 0.00425539, -0.0311535, 0.00814935, 0.921884, 0.387381, 0.0303684, -0.387444, 0.921393, 0, 2.47767, 4.90179)
+current = true
+fov = 40.1
+
+[node name="ScoreText" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 2.0
+offset_right = 338.0
+offset_bottom = 80.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_edleq")
